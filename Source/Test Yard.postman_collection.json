@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "46d6e022-afa1-450c-a8e1-f04078c366d7",
+		"name": "Test Yard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24358712"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Berer 11|cfH5x3pkRMTH5eZZHyTbd8GQI7DLLfFk3CAAIh4X25d2b249",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"tester@mail.com\",\r\n    \"password\": \"tester@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/login?email=tester@mail.com&password=tester@mail.com",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "tester@mail.com"
+								},
+								{
+									"key": "password",
+									"value": "tester@mail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "eyJpdiI6Im5MbW5vdDNKdXFIWWpvUWc1NlBNMUE9PSIsInZhbHVlIjoiL2k5a0x3TTRCRkgwU0duTWNsRE1icnN2Vk9UdlpRSDE3KzlvVE9TaFRYS3hYNTNUTGxibVl4UGxXeUxnVmtQditWMUNxWkl6UkVCeWhiVE9QQ3V6cjV3NGxzaGxTeHpKVG1IdnRpdHpJTTVKMXhxTEFCYzVvQmc0SkpWZ1VXdFYiLCJtYWMiOiI5YzJkOTcxZjcyZGY5NDFjZWU5YjdmM2RlZDdkNWU4YWQ2NWU4YWRjZTRmNDhjNzExOWFiNTkwMDAxMjE2ZGY2IiwidGFnIjoiIn0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tester2\",\r\n    \"email\": \"tester2@mail.com\",\r\n    \"password\": \"tester2@mail.com\",\r\n    \"password_confirmation\": \"tester2@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/register?name=Test User&email=test-user@mail.com&password=TestUser&password_confirmation=",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Test User"
+								},
+								{
+									"key": "email",
+									"value": "test-user@mail.com"
+								},
+								{
+									"key": "password",
+									"value": "TestUser"
+								},
+								{
+									"key": "password_confirmation",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log out",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 8|bqwJwucXC25ww954tq1216WGpGYyaqoH80p3ige1d32cedb2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/logout",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "Get Balance",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 6|lka7kzXoQK56s4mKc5QYfkuoY7foll6ZrjfoOIgg114ef997",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/get-balance",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"get-balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get History",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 6|lka7kzXoQK56s4mKc5QYfkuoY7foll6ZrjfoOIgg114ef997",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/get-history",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"get-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replenisment wallet",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 6|lka7kzXoQK56s4mKc5QYfkuoY7foll6ZrjfoOIgg114ef997",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 999.9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/replenishment-balance",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"replenishment-balance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Transfer",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 9|n0PvBFCI3jZltB4JumQ9quURrBr2ie7Hu1CTcNR28f2275a2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 999.9,\r\n    \"recipient_id\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/transfer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
